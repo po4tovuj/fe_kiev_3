@@ -1,0 +1,36 @@
+.container {
+  position: relative;
+  height: 448px;
+  width: 560px;
+  margin: 0 auto;
+  background-color: #7acdc6;
+  overflow: hidden; }
+
+.world {
+  position: absolute;
+  left: -5px; }
+  .world img {
+    height: 524px;
+    width: 569px; }
+
+.clouds {
+  position: absolute;
+  left: 214px;
+  top: -7px; }
+  .clouds img {
+    width: 350px; }
+
+.ship {
+  position: absolute;
+  left: 15px;
+  top: 287px;
+  width: 115px; }
+
+.water {
+  position: absolute;
+  height: 67px;
+  left: -7px;
+  top: 391px;
+  width: 571px; }
+
+/*# sourceMappingURL=style.css.map */

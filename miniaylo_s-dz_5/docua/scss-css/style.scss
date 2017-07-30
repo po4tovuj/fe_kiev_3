@@ -1,0 +1,198 @@
+@font-face {
+	font-family: "ArialRegular";
+	src: url("../fonts/ArialRegular/ArialRegular.woff") format("woff"), url("../fonts/ArialRegular/ArialRegular.ttf") format("truetype");
+		font-style: normal;
+		font-weight: normal;
+}
+@font-face {
+    font-family: "ArialBold";
+    src: url("../fonts/ArialBold/ArialBold.woff") format("woff"), url("../fonts/ArialBold/ArialBold.ttf") format("truetype");
+    	font-style: normal;
+	    font-weight: normal;
+}
+@font-face {
+	font-family: "ArialItalic";
+	src: url("../fonts/ArialItalic/ArialItalic.woff") format("woff"), url("../fonts/ArialItalic/ArialItalic.ttf") format("truetype");
+	    font-style: italic;
+	    font-weight: normal;
+}
+
+	$btn_a-color: #fff;
+
+	@mixin font-bold {
+		font-size: 15px;
+		font-family: ArialBold, sans-serif;
+	}
+
+@mixin btn-reception {
+	border: none;
+	border-radius: 5px;
+	background-color: #f00;
+	height: 41px;
+	line-height: 41px;
+	text-align: center;
+	width: inherit;
+	@include font-bold;
+
+	a {
+		color: $btn_a-color;
+		text-decoration: none;
+	}
+}
+
+@mixin promo-offers {
+	float: left;
+
+	div {
+		@include btn-reception;
+	}
+
+	img {
+		height: 213px;
+		margin-bottom: 8px;
+	}
+}
+
+span {
+	font-family: ArialBold, sans-serif;
+}
+
+.background {
+	background-color: #d1d1d1;
+	font-family: ArialRegular, sans-serif;
+	margin: auto;
+	padding: 57px 6px 0 3px;
+	text-align: center;
+	width: 750px;
+}
+
+.cardio_usg {
+	@include promo-offers;
+		margin-bottom: 23px;
+		width: 160px;
+
+	p {
+		height: 108px;
+	}
+}
+
+.clearfix {
+	content: "";
+	clear: both;
+}
+
+.expirience {
+	width: 550px;
+}
+
+.fixed_price {
+	margin: 23px 0 0;
+
+	a {
+		text-decoration: underline;
+	}
+}
+
+.float_wrap {
+	display: inline-block;
+	margin: 31px 0 0;
+}
+
+footer {
+	a {
+		color: $btn_a-color;
+	    font-family: ArialBold, sans-serif;
+		text-decoration: underline;
+	}
+		color: #fff;
+		font-family: ArialBold, sans-serif;
+		font-size: 10px;
+		height: 67px;
+		line-height: 2.1em;
+		margin: auto;
+		padding-top: 42px;
+		width: 370px;
+}
+
+.gynecologist {
+	@include promo-offers;
+	margin-bottom: 30px;
+	width: 255px;
+
+	p {
+		height: 85px;
+	}
+}
+
+.gynecologist_usg {
+	@extend .cardio_usg;
+	margin-left: 30px;
+}
+
+header {
+	img {
+		width: 641px;
+	}
+}
+
+.like_on_facebook {
+    @include btn-reception;
+	margin-top: 54px;
+	width: 540px;
+
+	a {
+		text-decoration: none;
+	}
+	span {
+		font-family: ArialItalic, sans-serif;
+	}
+}
+
+main {
+	h4 {
+		margin: 0 12px 10px 0;
+		text-align: center;
+	}
+	line-height: 1.45em;
+	margin: 51px 40px 0 50px;
+	text-align: left;
+}
+
+.neurologist {
+	@extend .cardio_usg;
+	margin-left: 30px;
+}
+
+.right_choice {
+
+	p {
+		margin-bottom: 10px;
+	}
+
+	a {
+		text-decoration: underline;
+	}
+
+	span {
+		font-family: ArialItalic, sans-serif;
+	}
+}
+.teeth_clean {
+	@include promo-offers;
+	@extend .gynecologist;
+	margin-left: 30px;
+}
+
+.wrapper {
+	background-color: #fff;
+	font-size: 16px;
+	margin: auto;
+	padding-bottom: 30px;
+	text-align: center;
+    width: 641px;
+
+}
+
+.xdays_left {
+	margin: 33px 0 23px;
+}
