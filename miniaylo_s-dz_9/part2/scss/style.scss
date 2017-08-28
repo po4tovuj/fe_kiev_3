@@ -1,0 +1,73 @@
+@import "materialize";
+
+@mixin border {
+    border: solid 1px #fff;
+}
+
+.article-caption {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.article-big {
+    width: 49%;
+}
+
+.article-small {
+    width: 31%;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.column-style {
+    position: relative;
+    height: 117vh;
+    top: -120vh;
+    z-index: -1;
+}
+
+.image-size {
+    @include border;
+    height: 10vw;
+}
+
+.header-caption {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.logo {
+    @include border;
+    height: 6vw;
+}
+
+.menu {
+    display: table;
+
+    &-item {
+        @include border;
+        display: table-cell;
+        height: 3vw;
+        vertical-align: middle;
+        justify-content: center;
+    }
+}
+
+.navbar-link {
+    color: #000;
+    font-size: 16px;
+    margin-left: 26px;
+}
+
+.sidebar {
+    @include border;
+    height: 90vh;
+}
+
+.valign-wrapper {
+    justify-content: center;
+}
