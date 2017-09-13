@@ -1,0 +1,31 @@
+.header-caption {
+  font-weight: 600;
+  font-size: 18px; }
+
+img {
+  border: solid 1px #fff; }
+
+.logo {
+  height: 6vw; }
+
+.menu {
+  display: table; }
+  .menu-item {
+    border: solid 1px #fff;
+    display: table-cell;
+    height: 3vw;
+    vertical-align: middle;
+    justify-content: center; }
+
+.navbar-link {
+  color: #000;
+  font-size: 16px;
+  margin-left: 26px; }
+
+.sidebar {
+  height: 110vh; }
+
+.valign-wrapper {
+  justify-content: center; }
+
+/*# sourceMappingURL=style.css.map */
