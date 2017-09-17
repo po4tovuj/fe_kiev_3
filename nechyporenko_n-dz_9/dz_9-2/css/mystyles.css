@@ -1,0 +1,20 @@
+nav ul a.btn {
+  margin-left: 1px;
+  margin-right: 0; }
+
+.main {
+  align-items: stretch;
+  display: flex; }
+
+.sidebar {
+  align-items: stretch;
+  display: flex; }
+  .sidebar-contant {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%; }
+
+.second-menu {
+  padding: 38px 0; }
