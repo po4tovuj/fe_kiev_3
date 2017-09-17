@@ -2,6 +2,11 @@
     border: solid 1px #fff;
 }
 
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .header-caption {
     font-weight: 600;
     font-size: 18px;
@@ -35,6 +40,11 @@ img {
 
 .sidebar {
     height: 110vh;
+
+    &_link {
+        display: block;
+        height: 100%;
+    }
 }
 
 .valign-wrapper {
