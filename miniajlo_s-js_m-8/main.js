@@ -7,19 +7,20 @@ const playSound = note => {
 
 const buttons = Array.from(document.querySelectorAll("button"));
 const keys = "qwertyuiop[]asdfghjkl;'zxcvbnm,./".split("");
-let spase = keys.push(' ');
-console.log(keys);
-// window.onclick = function(event){
-//     event.preventDefault();
-// }
+let spase = keys.push(' '),
+    activeBtn = {
+    node: null
+}
+
 window.onkeydown = function (event) {
-    let array = document.querySelectorAll('button');
     event.preventDefault();
-    for (let i = 0; i < array.length; i++) {
+    for (let i = 0; i < buttons.length; i++) {
         if ((keys[i]) === event.key) {
-            array[i].classList.add('keyboard__btn--active');
-            console.log(array[i]);
-            let btnAudio = array[i].getAttribute('data-note');
+            if (activeBtn.node === null){
+            activeBtn.node = buttons[i];
+            activeBtn.node.classList.add('keyboard__btn--active');
+        }
+            let btnAudio = buttons[i].getAttribute('data-note');
             console.log(btnAudio);
             let sound = document.getElementById('slideThree');
 
@@ -32,8 +33,8 @@ window.onkeydown = function (event) {
 }
 
 window.onkeyup = function (event) {
-    let arrayTwo = document.querySelectorAll('button');
-    for (let a = 0; a < arrayTwo.length; a++) {
-        arrayTwo[a].classList.remove('keyboard__btn--active');
-    }
+
+        activeBtn.node.classList.remove('keyboard__btn--active');
+        activeBtn.node = null;
+
 }

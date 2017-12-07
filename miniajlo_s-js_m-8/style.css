@@ -1,8 +1,6 @@
 .keyboard {
-    background: rgba(106, 191, 64, 0.1);
+    background-color: rgba(106, 191, 64, 0.1);
 }
-
-
 
 .keyboard__row {
     display: flex;
@@ -106,4 +104,3 @@
     font: 26px Arial, sans-serif;
     font-weight: bold;
 }
-
