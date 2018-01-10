@@ -12,13 +12,13 @@
 </head>
 
 <body>
-    <div class="add-user">
+    <form class="add-user">
         <span>Добавить пользователя</span>
         <br>
         <input type="text" id="user" name="" placeholder="name" value="">
         <input type="text" id="score" placeholder="score" name="" value="">
         <button type="button" id= "addUser" name="button">Добавить пользоветеля</button>
-    </div>
+    </form>
     <div>
         <table class="centered bordered highlight">
             <thead>
@@ -30,32 +30,22 @@
             </thead>
             <tbody id="js-tbody"></tbody>
         </table>
-
-        <button type="button" id="refresh" name="button">Обновить список пользователей</button>
-        <br>
-        <br>
+        <button type="button" id="get" name="button">Обновить список пользователей</button>    
     </div>
-    <div class="del">
-        <span>Удалить по id</span>
-        <br>
+    <form class="del">
+        <span>Удалить по id</span> 
         <input type="text" id="restId" name="" value="">
         <button type="button" class="delete" name="button">Удалить по id</button>
-        <br>
-    </div>
-    <div class="get">
+    </form>
+    <form class="update">
         <span>Обновить информацию о пользователе</span>
-        <br>
         <input type="text" id="searchId" name="" placeholder="введите id пользователя" value="">
-        <br>
-        <br> name =
+        <span> name: </span>
         <input type="text" id="refreshName" name="" value="">
-        <br>
-        <br> score =
+         <span>score:</span>
         <input type="text" id="refreshScore" name="" value="">
-        <br>
-        <br>
-        <button type="button" id="refresh" name="button">обновить информацию</button>
-    </div>
+        <button type="button" id="update" name="button">обновить информацию</button>
+    </form>
 
 
 
