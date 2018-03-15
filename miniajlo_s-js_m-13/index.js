@@ -5,7 +5,7 @@ const submitBtn = document.getElementById("submit-btn");
 const resultsList = document.querySelector(".results");
 submitBtn.addEventListener("click", validate);
 
-function validate() {
+function validate(event) {
     event.preventDefault();
     let results = {};
     let phoneReg = /^\+?[38]?[8]?[0]{1}[1-9]{1}\d{8}$/;
@@ -15,7 +15,7 @@ function validate() {
     results.phone = phoneReg.test(tel.value);
     showResults(results);
     if (results.firstName && results.lastName && results.phone) {
-        document.getElementsByTagName('form')[0].reset();
+        document.querySelector('form').reset();
     }
 }
 
