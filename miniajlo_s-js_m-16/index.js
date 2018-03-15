@@ -1,17 +1,17 @@
 class Shape {
-    constructor(color, initX, initY) {
+    constructor({color, initX, initY}) {
         this.color = color;
         this.x = initX;
         this.y = initY;
     }
    getColor(){
-        console.log(`Color = ${this.color}`);
+        console.log(`Color: ${this.color}`);
    }
    setColor(val){
         this.color = val;
    }
    getCords(){
-        console.table(this, [x, y]);
+        console.log(`x: ${this.x}; y: ${this.y}`);
    }
    moveTo(newX, newY){
         this.x = newX;
@@ -20,8 +20,8 @@ class Shape {
 }
 
 class Rectangle extends Shape {
-    constructor(color, initX, initY, initWidth, initHeight) {
-        super(color, initX, initY);
+    constructor({initWidth, initHeight, ...rest}) {
+        super(rest);
         this.width = initWidth;
         this.height = initHeight;
     }
@@ -32,7 +32,7 @@ class Rectangle extends Shape {
         this.height = newHeight;
     }
     getDims(){
-        console.table(this, [width, height]);
+        console.log(`Width: ${this.width}; Height: ${this.height}`);
     }
     draw(){
         console.table(this);
@@ -46,8 +46,8 @@ class Rectangle extends Shape {
 
 }
 class Circle extends Shape {
-    constructor (color, initX, initY, initRadius){
-        super(color, initX, initY);
+    constructor ({initRadius, ...rest}){
+        super(rest);
         this.radius = initRadius;
     }
     getRadius(){
@@ -66,7 +66,22 @@ class Circle extends Shape {
         
     }
 }
-let shape = new Shape('#f00', 40, 50);
-shape.getColor();
-let rectangle = new Rectangle('#009688', 10, 10, 100, 100);
-let circle = new Circle('#FF5722', 50, 50, 250);
+let shape = new Shape({
+    color:'#f00', 
+    initX: 40,
+    initY: 50
+});
+shape.getCords();
+let rectangle = new Rectangle({
+    color: '#009688', 
+    initX: 10,
+    initY: 10, 
+    initWidth: 100, 
+    initHeight: 100
+});
+let circle = new Circle({
+    color: '#FF5722',
+    initX: 50,
+    initY: 50,
+    initRadius: 250
+});
