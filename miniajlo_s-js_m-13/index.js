@@ -5,8 +5,7 @@ const submitBtn = document.getElementById("submit-btn");
 const resultsList = document.querySelector(".results");
 submitBtn.addEventListener("click", validate);
 
-function validate(e) {
-    // e.preventDefault();
+function validate(x) {
     let results = {};
     let phoneReg = /^\+?[38]?[8]?[0]{1}[1-9]{1}\d{8}$/;
     let nameReg = /^[A-Z]{1}([^а-яёєіїґ’'`]i?)[a-z]+((\s[A-Z]{1}([^а-яёєіїґ’'`]i?)[a-z]+)+)?$|^[А-ЯЁ]{1}([^a-zєіїґ’'`]i?)[а-яё]+((\s[А-ЯЁ]{1}([^a-zєіїґ’'`]i?)[а-яё]+)+)?$|^[А-ЯЄІЇҐ’'`]{1}([^a-zыэъ]i?)[а-яєіїґ’'`]+((\s[А-ЯЄІЇҐ’'`]{1}([^a-zыэъ]i?)[а-яєіїґ’'`]+)+)?$/;
