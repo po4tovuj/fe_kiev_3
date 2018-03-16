@@ -5,7 +5,8 @@ const submitBtn = document.getElementById("submit-btn");
 const resultsList = document.querySelector(".results");
 submitBtn.addEventListener("click", validate);
 
-function validate(x) {
+function validate(event) {
+    event.preventDefault();
     let results = {};
     let phoneReg = /^\+?[38]?[8]?[0]{1}[1-9]{1}\d{8}$/;
     let nameReg = /^[A-Z]{1}([^а-яёєіїґ’'`]i?)[a-z]+((\s[A-Z]{1}([^а-яёєіїґ’'`]i?)[a-z]+)+)?$|^[А-ЯЁ]{1}([^a-zєіїґ’'`]i?)[а-яё]+((\s[А-ЯЁ]{1}([^a-zєіїґ’'`]i?)[а-яё]+)+)?$|^[А-ЯЄІЇҐ’'`]{1}([^a-zыэъ]i?)[а-яєіїґ’'`]+((\s[А-ЯЄІЇҐ’'`]{1}([^a-zыэъ]i?)[а-яєіїґ’'`]+)+)?$/;
@@ -22,11 +23,11 @@ function showResults(results) {
     let markup = '';
     for (let key in results) {
         if (results.hasOwnProperty(key)) {
-            if (results[key]) {
-                markup += `<li class="success"> SUCCESS: '${key}' passed validation</li>`;
-            } else {
-                markup += `<li class="error"> ERROR: '${key}' failed validation</li>`;
-            }
+            const isValid = results[key];
+            markup += isValid
+            ? `<li class="success"> SUCCESS: '${key}' passed validation</li>`
+            : `<li class="error"> ERROR: '${key}' failed validation</li>`;
+        
         }
     }
     return resultsList.innerHTML = markup;
